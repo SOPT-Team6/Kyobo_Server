@@ -8,5 +8,5 @@ router.get('/', function(req, res, next) {
 
 router.use('/detail', require('./detail'));
 router.use('/main', require('./main'));
-
+router.use('/search', require('./search'));
 module.exports = router;

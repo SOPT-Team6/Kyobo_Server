@@ -13,5 +13,5 @@ if (config.use_env_variable) {
 db.sequelize = sequelize;
 db.Sequelize = Sequelize;
 db.Book = require('./book')(sequelize, Sequelize);
-
+db.Search = require('./search')(sequelize, Sequelize);
 module.exports = db;
