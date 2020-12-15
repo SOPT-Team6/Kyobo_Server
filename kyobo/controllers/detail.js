@@ -1,7 +1,7 @@
 const util = require('../modules/util');
 const statusCode = require('../modules/statusCode');
 const responseMessage = require('../modules/responseMessage');
-const { Book } = require('../models');
+const { ReadingBook, NewBook } = require('../models');
 
 //상세보기
 module.exports = {
@@ -12,7 +12,7 @@ module.exports = {
       res.status(statusCode.BAD_REQUEST).send(util.fail(statusCode.BAD_REQUEST, responseMessage.NULL_VALUE));
     }
       try{
-        const result = await Book.findAll({
+        const result = await ReadingBook.findAll({
           where: {
             book_idx: book_idx
           },
@@ -32,7 +32,7 @@ module.exports = {
       res.status(statusCode.BAD_REQUEST).send(util.fail(statusCode.BAD_REQUEST, responseMessage.NULL_VALUE));
     }
       try{
-        const result = await Book.findAll({
+        const result = await NewBook.findAll({
           where: {
             book_idx: book_idx
           },

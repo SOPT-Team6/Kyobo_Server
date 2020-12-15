@@ -1,9 +1,9 @@
-const { Book } = require('../models');
+const { ReadingBook, NewBook } = require('../models');
 
 module.exports = {
   getRbList: async () => {
     try {
-      const Rb = await Book.findAll({
+      const Rb = await ReadingBook.findAll({
         attributes: [
           'book_idx',
           'book_img',
@@ -19,7 +19,7 @@ module.exports = {
   },
   getNbList: async () => {
     try {
-      const Nb = await Book.findAll({
+      const Nb = await NewBook.findAll({
         attributes: [
           'book_idx',
           'book_img'

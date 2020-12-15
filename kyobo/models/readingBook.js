@@ -1,5 +1,5 @@
 module.exports = (sequelize, DataTypes) => {
-  return sequelize.define('Book', {
+  return sequelize.define('ReadingBook', {
     //pk로 책 인덱스 번호
       book_idx: {
         type: DataTypes.INTEGER,
