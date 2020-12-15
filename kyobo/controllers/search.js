@@ -29,7 +29,7 @@ module.exports = {
             }
           },
           )
-        res.status(statusCode.OK).send(util.success(statusCode.OK, "책 검색 성공", result))
+        res.status(statusCode.OK).send(util.success(statusCode.OK, "책 검색 성공",result))
       } catch (err) {
         console.log(err);
         res.status(statusCode.INTERNAL_SERVER_ERROR).send(util.fail(statusCode.INTERNAL_SERVER_ERROR, "책 검색 실패"));

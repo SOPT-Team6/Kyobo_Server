@@ -3,7 +3,7 @@ module.exports = {
       status,
       success: true,
       message,
-      data,
+      data
   }),
   fail: (status, message) => ({
       status,
