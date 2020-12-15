@@ -3,7 +3,7 @@ const statusCode = require('../modules/statusCode');
 const responseMessage = require('../modules/responseMessage');
 const sequelize = require("sequelize");
 const Op = sequelize.Op;
-const { NewBook, Search } = require('../models');
+const { Book, Search } = require('../models');
 
 module.exports = {
   searchInfo: async (req, res) => {
@@ -12,7 +12,7 @@ module.exports = {
       res.status(statusCode.BAD_REQUEST).send(util.fail(statusCode.BAD_REQUEST, responseMessage.NULL_VALUE));
     }
       try{
-        const result = await NewBook.findAll({
+        const result = await Book.findAll({
           where: {
                 [Op.or]: [
                     {
